@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Kahatie-DynHost-Ovh</Name>
+  <Category>Network:DNS</Category>
+  <Description>DynHost OVH Docker</Description>
+  <Overview>DynHost OVH Docker</Overview>
+  <Registry>https://registry.hub.docker.com/u/kahatie/dynhost-ovh.docker/</Registry>
+  <GitHub>https://github.com/kahatie/dynhost-ovh.docker</GitHub>
+  <Repository>kahatie/dynhost-ovh.docker</Repository>
+  <Icon>https://www.heise.de/download/media/openvpn-22153/openvpn-logo_1-1-30.png</Icon>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>DYNHOST_DOMAIN_NAME</Name>
+      <Value>my-domain</Value>
+    </Variable>
+    <Variable>
+      <Name>DYNHOST_LOGIN</Name>
+      <Value>my-dynhost-user-set-on-ovh-manager</Value>
+    </Variable>
+    <Variable>
+      <Name>DYNHOST_PASSWORD</Name>
+      <Value>my-dynhost-password-set-on-ovh-manager</Value>
+    </Variable>
+  </Environment>
+</Containers>
