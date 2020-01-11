@@ -4,13 +4,13 @@
   <Category>tools</Category>
   <Name>SFTP</Name>
   <Description>
-	Simple SFTP server https://github.com/atmoz/sftp/tree/alpine-3.5
+	Simple SFTP server
   </Description>
   <Overview>
     Simple SFTP server 
   </Overview>
-  <GitHub>https://github.com/atmoz/sftp/tree/alpine-3.5</GitHub>
-  <Repository>atmoz/sftp:alpine</Repository>
+  <GitHub>https://github.com/kahatie/docker-sftp</GitHub>
+  <Repository>kahatie/sftp</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
@@ -25,19 +25,18 @@
   </Networking>
   <Environment>
     <Variable>
-      <Name></Name>
+      <Name>USER</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>PASSWORD</Name>
       <Value></Value>
     </Variable>
   </Environment>    
   <Data>
     <Volume>
       <HostDir>/mnt/user</HostDir>
-      <ContainerDir>/home/user</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-	<Volume>
-      <HostDir>path to users.conf</HostDir>
-      <ContainerDir>/etc/sftp/users.conf</ContainerDir>
+      <ContainerDir>/mnt/user</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
   </Data>
